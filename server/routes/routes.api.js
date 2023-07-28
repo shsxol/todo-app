@@ -10,7 +10,7 @@ router.get("/", (req, res)=>{
 })
 
 router.use("/todos", todosRouter);
-router.use('subtasks', subtaskRouter)
+router.use('/subtasks', subtaskRouter)
 
 module.exports = router;
 
