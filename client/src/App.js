@@ -1,9 +1,11 @@
+import Title from "./component/Title";
 function App() {
-  return (
-    <div className="App">
-      Hello worldss
-    </div>
+  return ( 
+  <>
+  <Title name ="ToDo App" />
+  </>
   );
+  
 }
 
 export default App;
