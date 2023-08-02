@@ -85,20 +85,50 @@
 
 // Hook react 
 // usestate hook
-import React, {useState} from "react";
+// import React, {useState} from "react";
 
-export default function FavoriteColor() {
-    const [color, setColor] = useState("red");
+// export default function FavoriteColor() {
+//     const [color, setColor] = useState("red");
+
+//     return (
+//         <>
+//         <h1> My favorite color is {color}! </h1>
+//         <button type ="button" onClick={() => setColor("blue")}> 
+//         Blue
+//         </button>
+//         <button type ="button" onClick={() => setColor("red")}> 
+//         Red
+//         </button>
+//         </>
+//     )
+// }
+
+// updating objects and arrays in state
+
+import {useState} from "react";
+export default function Car(){
+    const [car, setCar] = useState({
+        brand:"Ford",
+        model:"Mustang",
+        year:"1964",
+        color:"red",
+    });
+
+    const updateColor = () => {
+        setCar((previousState) => {
+            return { ...previousState, color :"blue"};
+        });
+    };
 
     return (
         <>
-        <h1> My favorite color is {color}! </h1>
-        <button type ="button" onClick={() => setColor("blue")}> 
+        <h1>My {car.brand} </h1>
+        <p>
+            It is a color {car.color} {car.model} from {car.year}.
+        </p>
+        <button type ="button" onClick={updateColor}>
         Blue
         </button>
-        <button type ="button" onClick={() => setColor("red")}> 
-        Red
-        </button>
         </>
-    )
+    );
 }
