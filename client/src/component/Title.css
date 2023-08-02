@@ -1,0 +1,8 @@
+/* Title.css */
+
+.title {
+    text-align: center;
+    margin-top: 10vh; /* Center the element vertically using viewport height (vh) */
+    transform: translateY(-50%); /* Correct the position to truly center the text */
+  }
+  
