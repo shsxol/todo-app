@@ -67,18 +67,38 @@
 
 // React list
 
-export default function Garage(){
-    const cars =['Ford','BMW', 'Audi', 'Tesla'];
+// export default function Garage(){
+//     const cars =['Ford','BMW', 'Audi', 'Tesla'];
+//     return (
+//         <>
+//         <h1> Who lives in my garage? </h1>
+//         <ul>
+//             {cars.map((car) => <Car brand ={car} /> )}
+//         </ul>
+//         </>
+//     );
+// }
+
+// function Car(props){
+//     return <li>I am  {props.brand} </li>;
+// }
+
+// Hook react 
+// usestate hook
+import React, {useState} from "react";
+
+export default function FavoriteColor() {
+    const [color, setColor] = useState("red");
+
     return (
         <>
-        <h1> Who lives in my garage? </h1>
-        <ul>
-            {cars.map((car) => <Car brand ={car} /> )}
-        </ul>
+        <h1> My favorite color is {color}! </h1>
+        <button type ="button" onClick={() => setColor("blue")}> 
+        Blue
+        </button>
+        <button type ="button" onClick={() => setColor("red")}> 
+        Red
+        </button>
         </>
-    );
-}
-
-function Car(props){
-    return <li>I am  {props.brand} </li>;
+    )
 }
