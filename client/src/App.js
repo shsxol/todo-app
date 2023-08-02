@@ -4,12 +4,14 @@ import React from "react";
 import Title from "./component/Title";
 import Example from "./component/Example";
 
+const cars =['Ford', 'BMW', 'Audi']
+
 
 function App() {
   return (
     <>
       <Title name="TODO App" />
-      <Example></Example>
+      <Example cars= {cars}/>
     </>
   );
 }
