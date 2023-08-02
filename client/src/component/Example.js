@@ -106,12 +106,14 @@
 // updating objects and arrays in state
 
 import {useState} from "react";
-export default function Car(){
+import Button from 'react-bootstrap/Button';
+
+const Car = () => {
     const [car, setCar] = useState({
-        brand:"Ford",
-        model:"Mustang",
-        year:"1964",
-        color:"red",
+      brand: "Ford",
+      model: "Mustang",
+      year: "1964",
+      color: "red",
     });
 
     const updateColor = (newColor) => {
@@ -126,9 +128,9 @@ export default function Car(){
         <p>
             It is a color {car.color} {car.model} from {car.year}.
         </p>
-        <button type ="button" onClick={() => updateColor("yellow")}>
-        yellow
-        </button>
+        <Button variant='warning' onClick= {()=> updateColor("yellow")}> Yellow</Button>   
         </>
     );
 }
+
+export default Car;
