@@ -114,9 +114,9 @@ export default function Car(){
         color:"red",
     });
 
-    const updateColor = () => {
+    const updateColor = (newColor) => {
         setCar((previousState) => {
-            return { ...previousState, color :"blue"};
+            return { ...previousState, color :newColor};
         });
     };
 
@@ -126,8 +126,8 @@ export default function Car(){
         <p>
             It is a color {car.color} {car.model} from {car.year}.
         </p>
-        <button type ="button" onClick={updateColor}>
-        Blue
+        <button type ="button" onClick={() => updateColor("yellow")}>
+        yellow
         </button>
         </>
     );
