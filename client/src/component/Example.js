@@ -116,11 +116,22 @@ const Car = () => {
       color: "red",
     });
 
+const [customColor, setCustomColor] = useState('');
+
     const updateColor = (newColor) => {
         setCar((previousState) => {
             return { ...previousState, color :newColor};
         });
     };
+
+const handleCustomColorChange = (event) => {
+        setCustomColor(event.target.value);
+      };
+      
+const handleApplyCustomColor = () => {
+        updateColor(customColor);
+        setCustomColor(''); // Clear the input field after applying the color
+      };
 
     return (
         <>
@@ -128,7 +139,13 @@ const Car = () => {
         <p>
             It is a color {car.color} {car.model} from {car.year}.
         </p>
-        <Button variant='warning' onClick= {()=> updateColor("yellow")}> Yellow</Button>   
+        <input
+        type="text"
+        value={customColor}
+        onChange={handleCustomColorChange}
+        placeholder="Enter custom color"
+      />
+        <Button variant='warning' onClick= {handleApplyCustomColor}> Apply</Button>   
         </>
     );
 }
