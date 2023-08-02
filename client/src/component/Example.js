@@ -1,11 +1,11 @@
+// rfce
+// adding events component
 export default function Example() {
-  const shoot =() => {
-    alert("goal");
+  const shoot =(a) => {
+    alert(a);
   };
     return (
-        <>
-    <button onClick={shoot}>Take the shot !</button>
-    </>
+    <button onClick={() => shoot("Goaa;!")}>Take the shot !</button>
     );
 
 }
