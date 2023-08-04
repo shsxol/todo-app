@@ -4,7 +4,8 @@
   "description": "TODO Application backend",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon .",
+    "start": "node .",
+    "dev": "nodemon .",
     "debug": "nodemon --inspect ."
   },
   "author": "",
